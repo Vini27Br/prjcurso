@@ -1,8 +1,17 @@
 package br.com.vinicius.prjcurso.MODEL;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "curso")
+
+
 public class Curso {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Integer id;
     private String  namecurso;
 
