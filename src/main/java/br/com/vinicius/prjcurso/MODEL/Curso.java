@@ -1,6 +1,8 @@
 package br.com.vinicius.prjcurso.MODEL;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +16,9 @@ public class Curso {
 
     private Integer id;
     private String  namecurso;
+
+    @OneToMany(mappedBy = "curso")
+    private List<Aluno> alunos = new ArrayList<>();
 
     @Override
     public boolean equals(Object o) {
