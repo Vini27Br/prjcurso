@@ -17,6 +17,25 @@ public class Curso {
     private Integer id;
     private String  namecurso;
 
+    public Integer getCarg() {
+        return carg;
+    }
+
+    public void setCarg(Integer carg) {
+        this.carg = carg;
+    }
+
+    public String getPerd() {
+        return perd;
+    }
+
+    public void setPerd(String perd) {
+        this.perd = perd;
+    }
+
+    private Integer carg ;
+    private String  perd ;
+
     @OneToMany(mappedBy = "curso")
     private List<Aluno> alunos = new ArrayList<>();
 
